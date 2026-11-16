@@ -36,8 +36,8 @@
 			default-features = false
 
 		[workspace.dependencies.prost]
-			features = ["default", "derive", "prost-derive", "std"]
-			version = "0.13.5"
+			features = ["default", "derive", "std"]
+			version = "0.14.6"
 			default-features = false
 
 		[workspace.dependencies.chrono-tz]
@@ -57,8 +57,8 @@
 
 		[workspace.dependencies.typedb-protocol]
 			features = []
-			git = "https://github.com/typedb/typedb-protocol"
-			tag = "3.12.0"
+			git = "https://github.com/Jitpomi/typedb-protocol"
+			rev = "2644e0d91c6584c3475f50e4f964f1d0ee5cf8f7"
 			default-features = false
 
 		[workspace.dependencies.serde]
@@ -93,7 +93,7 @@
 
 		[workspace.dependencies.tonic-types]
 			features = []
-			version = "0.12.3"
+			version = "0.14.9"
 			default-features = false
 
 		[workspace.dependencies.async-std]
@@ -112,18 +112,18 @@
 			default-features = false
 
 		[workspace.dependencies.tonic]
-			features = ["channel", "codegen", "default", "prost", "router", "server", "tls", "tls-native-roots", "tls-roots", "transport"]
-			version = "0.12.3"
+			features = ["channel", "codegen", "default", "router", "server", "tls-ring", "tls-native-roots", "transport"]
+			version = "0.14.9"
 			default-features = false
 
 		[workspace.dependencies.typedb-driver]
 			path = "rust"
-			features = ["sync"]
+			features = []
 			default-features = false
 
 		[workspace.dependencies.chrono]
 			features = ["alloc", "clock", "default", "iana-time-zone", "js-sys", "now", "oldtime", "std", "wasm-bindgen", "wasmbind", "winapi", "windows-link"]
-			version = "0.4.45"
+			version = "0.4.44"
 			default-features = false
 
 		[workspace.dependencies.config]

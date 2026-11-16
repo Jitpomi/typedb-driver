@@ -24,7 +24,7 @@ use std::{
 
 use tonic::{
     Request, Status,
-    body::BoxBody,
+    body::Body,
     client::GrpcService,
     service::{
         Interceptor,
@@ -44,7 +44,7 @@ type ResponseFuture = InterceptorResponseFuture<ChannelResponseFuture>;
 pub(super) type CallCredChannel = InterceptedService<Channel, CredentialInjector>;
 
 pub(super) trait GRPCChannel:
-    GrpcService<BoxBody, Error = TonicError, ResponseBody = BoxBody, Future = ResponseFuture> + Clone + Send + 'static
+    GrpcService<Body, Error = TonicError, ResponseBody = tonic::service::interceptor::ResponseBody<Body>, Future = ResponseFuture> + Clone + Send + 'static
 {
 }
 
